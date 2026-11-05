@@ -16,7 +16,7 @@
     </div>
     <div class="slip-total">
       <span>Gehalt</span>
-      <span class="display"><span class="mark">1.350,00 €</span></span>
+      <span class="display"><span class="mark">?.???,?? €</span></span>
     </div>
   </div>
 </template>
