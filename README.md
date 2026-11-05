@@ -32,7 +32,7 @@ Nur Spiegeln möglich (fremder PC)? Slido-Admin auf dem Handy, Folien am PC.
 
 - [ ] Slido-Event anlegen (slido.com, kostenloser Plan reicht: Q&A unbegrenzt, bis 100 Teilnehmende, 3 Umfragen)
   - Q&A: anonyme Fragen erlauben, Upvotes an
-  - Umfrage 1 anlegen: „Was verdient man im dualen Studium?“, Optionen A–D wie auf Folie 2
+  - 3 Umfragen fürs Abschlussquiz anlegen (je eine Aussage von der Quiz-Folie, Optionen „Wahr“/„Falsch“)
   - Link und Code in `config.ts` eintragen. Solange dort `DEIN-CODE` steht, sind alle QR-Codes rot markiert.
 - [ ] Foto (Hochformat) nach `public/img/` legen und in `config.ts` eintragen
 - [ ] Platzhalter auf Folie 4 ersetzen: Rolle, Firma (rot gestrichelt markiert)
@@ -52,16 +52,16 @@ Nur Spiegeln möglich (fremder PC)? Slido-Admin auf dem Handy, Folien am PC.
 | Zeit | Folie | Was passiert |
 | --- | --- | --- |
 | 0:00 | Titel | Läuft schon beim Reinkommen, QR-Code führt zu Slido |
-| 0:20 | Schätzt mal | Live-Umfrage 1, ansagen: „Slido offen lassen, Fragen jederzeit rein“ |
-| 1:30 | 1.350 € | Auflösung, Gehalt nach Studienjahr |
-| 2:30 | Kurz zu mir | Max. 45 Sekunden: studiert, heute Vollzeit |
-| 3:15 | In einem Satz | Hochschule + Firma, Bewerbung läuft über die Firma |
-| 4:30 | Ablauf | 7 Semester, Praxisphasen, Bachelorarbeit im 7. |
-| 6:00 | Wahr oder falsch? | 4 Aussagen, Daumen hoch/runter, dann auflösen |
-| 8:15 | Lohnt sich das? | Ehrlich: Dafür und dagegen |
-| 9:45 | Passt das zu mir? | Selbsttest im Kopf |
-| 10:30 | So kommst du rein | 5 Schritte, etwa ein Jahr vorher bewerben |
-| 12:00 | Drei Tipps | Aus dem eigenen Alltag |
+| 0:20 | Schätzt mal | Handzeichen, ansagen: „QR-Code unten rechts = anonym Fragen stellen“ |
+| 1:00 | 1.350 € | Auflösung, Gehalt nach Studienjahr |
+| 2:00 | Kurz zu mir | Max. 45 Sekunden: studiert, heute Vollzeit |
+| 2:45 | In einem Satz | Hochschule + Firma, Bewerbung läuft über die Firma |
+| 4:00 | Ablauf | 7 Semester, Praxisphasen, Bachelorarbeit im 7. |
+| 5:30 | Lohnt sich das? | Ehrlich: Dafür und dagegen |
+| 7:00 | Passt das zu mir? | Selbsttest im Kopf |
+| 7:45 | So kommst du rein | 5 Schritte, etwa ein Jahr vorher bewerben |
+| 9:15 | Drei Tipps | Aus dem eigenen Alltag |
+| 10:45 | Habt ihr aufgepasst? | Abschlussquiz in Slido: 3 Aussagen wahr/falsch, Überleitung zu den Fragen |
 | 13:30 | Eure Fragen | Bleibt stehen, Fragen vom Laptop vorlesen |
 | Ende | Danke | Links, QR zu den Folien |
 
@@ -78,13 +78,14 @@ Was letztes Jahr nicht funktioniert hat: Am Ende kamen kaum Fragen. Darauf ist d
 - Vorstellen erst danach und kurz. Schüler interessiert, ob das was für *sie* ist, nicht dein Lebenslauf.
 
 **Alle 3–4 Minuten etwas zum Mitmachen**
-- Umfrage (Folie 2), Daumen hoch/runter (Folie 7), Selbsttest (Folie 9), dann die halbe Slot-Zeit nur Fragen.
+- Handzeichen (Folie 2), Selbsttest (Folie 8), Abschlussquiz in Slido (Folie 11), dann die halbe Slot-Zeit nur Fragen.
 - Gelbe Folien heißen immer: „Jetzt seid ihr dran.“ So lernt das Publikum das Muster.
 
 **Fragen**
 - Anonym über Slido: Niemand muss sich vor den anderen melden.
-- Der QR-Code steht auf jeder Folie, wer bei der Umfrage gescannt hat, ist schon drin.
-- Bei der Umfrage einmal ansagen, dass Fragen jederzeit in Slido gehen.
+- Slido hat zwei Aufgaben: anonyme Fragen (QR-Code auf jeder Folie) und das Abschlussquiz.
+- Das Quiz steht direkt vor der Fragerunde: Wer abgestimmt hat, ist schon in Slido und stellt viel eher eine Frage.
+- Auf Folie 2 einmal ansagen, dass Fragen jederzeit in Slido gehen.
 
 **Folien**
 - Eine Aussage pro Folie, mindestens 22px Schrift auf 1280 × 720, kein Fließtext.

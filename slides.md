@@ -29,7 +29,7 @@ layout: cover
     <Payslip />
     <div class="cover-ask">
       <QrCode :size="104" />
-      <p><strong>Schon jetzt scannen:</strong><br>Hier stellt ihr gleich eure Fragen, anonym.</p>
+      <p><strong>Schon jetzt scannen:</strong><br>Hier stellt ihr jederzeit eure Fragen, anonym.</p>
     </div>
   </div>
 </div>
@@ -100,15 +100,14 @@ layout: stage
     <p class="muted-ink">Pro Monat, brutto, im ersten Jahr</p>
     <ol class="options">
       <li><b>A</b>0 €, man studiert ja</li>
-      <li><b>B</b>ungefähr 500 €</li>
-      <li><b>C</b>ungefähr 1.300 €</li>
+      <li><b>B</b>400 bis 700 €</li>
+      <li><b>C</b>1.100 bis 1.500 €</li>
       <li><b>D</b>mehr als 2.500 €</li>
     </ol>
   </div>
-  <div class="poll-qr">
-    <QrCode :size="260" />
-    <p><strong>Abstimmen:</strong> scannen<br>oder slido.com, Code <SlidoCode /></p>
-    <p class="poll-hint">Danach bleibt der Link offen: Schreibt eure Fragen rein, wann immer sie euch einfallen.</p>
+  <div class="poll-hands">
+    <div class="i-ph-hand-waving-bold" />
+    <p><strong>Hand hoch</strong><br>bei eurer Antwort</p>
   </div>
 </div>
 
@@ -150,25 +149,26 @@ layout: stage
   border: 3px solid var(--ink);
   font: 800 22px/1 var(--font-display);
 }
-.poll-hint {
-  font-weight: 700;
+.poll-hands {
+  text-align: center;
 }
-.poll-qr p {
+.poll-hands > div {
+  font-size: 160px;
+  margin: 0 auto;
+}
+.poll-hands p {
   margin-top: 18px;
-  font-size: 19px;
-  line-height: 1.35;
+  font-size: var(--fs-body);
+  line-height: 1.3;
 }
 </style>
 
 <!--
-[0:20–1:30] Umfrage in Slido starten (Umfrage 1 "Gehalt schätzen", Optionen A–D).
-"Holt mal eure Handys raus." 30–45 Sekunden warten.
-Ergebnis auf dem Laptop ablesen und ansagen, NICHT auf den Beamer holen: "Die meisten tippen B, 500 Euro. Mal sehen …"
-Fallback ohne WLAN: Hände hoch pro Option.
+[0:20–1:00] Per Handzeichen, ohne Handy: Option für Option vorlesen, "Hand hoch, wer A tippt" usw.
+Kommentieren, was du siehst: "Die meisten tippen B. Mal sehen …"
 
-WICHTIG, laut sagen: "Lasst Slido offen. Die zweite Hälfte gehört euch, 15 Minuten nur Fragen.
-Schreibt alles rein, was euch während des Vortrags einfällt, ich gehe das danach durch."
-Wer hier einmal gescannt hat, ist schon drin und stellt später viel eher eine Frage.
+Kurz ansagen: "Der QR-Code unten rechts führt zu Slido. Da könnt ihr jederzeit anonym Fragen stellen,
+die zweite Hälfte gehört euch: 15 Minuten nur Fragen."
 -->
 
 ---
@@ -182,7 +182,7 @@ Wer hier einmal gescannt hat, ist schon drin und stellt später viel eher eine F
   <div class="steps">
     <div class="step"><span class="muted">1. Jahr</span><span class="display">1.350 €</span></div>
     <div class="step"><span class="muted">2. Jahr</span><span class="display">1.446 €</span></div>
-    <div class="step"><span class="muted">3. Jahr</span><span class="display">1.546 €</span></div>
+    <div class="step"><span class="muted">ab 3. Jahr</span><span class="display">1.546 €</span></div>
     <div class="step after"><span>Nach dem Abschluss</span><span class="display">~4.200 €</span></div>
   </div>
 </div>
@@ -236,7 +236,8 @@ Wer hier einmal gescannt hat, ist schon drin und stellt später viel eher eine F
 <!--
 [1:30–2:30] Auflösen. Kurz kommentieren, was am Ergebnis überrascht.
 "Das ist kein Taschengeld, das ist ein Arbeitsvertrag. Und keine Studienschulden."
-Die orange Zeile ist dein Teaser: "Wie es nach dem Abschluss aussieht, erzähle ich euch in der Fragerunde." 
+Die orange Zeile: "Und nach dem Abschluss geht es noch mal deutlich hoch. Wenn ihr mehr wissen wollt: fragt mich nachher."
+Das Studium dauert 3,5 Jahre, das letzte halbe Jahr läuft mit dem Gehalt aus dem 3. Jahr (oder mehr) weiter.
 -->
 
 ---
@@ -300,7 +301,7 @@ TODO: Foto nach public/img/ legen und in config.ts eintragen (Hochformat), Firma
   <span class="eq-op display">=</span>
   <ul class="eq-result">
     <li>Bachelor-Abschluss</li>
-    <li>3 Jahre Berufserfahrung</li>
+    <li>3,5 Jahre Berufserfahrung</li>
     <li>Gehalt, jeden Monat</li>
   </ul>
 </div>
@@ -360,6 +361,7 @@ TODO: Foto nach public/img/ legen und in config.ts eintragen (Hochformat), Firma
 <!--
 [3:15–4:30] Kernbotschaft: Es gibt immer zwei Partner.
 Klick: Bewerbung läuft über die Firma. Das wissen die meisten nicht.
+Gibt es nicht nur für Informatik: auch BWL, Technik, Soziales, Gesundheit und vieles mehr.
 Optional erwähnen: Es gibt ausbildungsintegrierte Modelle (mit IHK-Abschluss) und praxisintegrierte (wie KoSI).
 -->
 
@@ -398,85 +400,10 @@ Optional erwähnen: Es gibt ausbildungsintegrierte Modelle (mit IHK-Abschluss) u
 
 <!--
 [4:30–6:00] Grafik von links nach rechts erklären.
-Blau = Hörsaal, Orange = Büro. In den Semesterferien bist du in der Firma, nicht am Strand.
+Blau = Hörsaal, Orange = Büro. In der vorlesungsfreien Zeit bist du in der Firma, nicht am Strand. Urlaub hast du wie im Job.
 In den Praxisphasen (3., 5., 7.) arbeitest du an echten Projekten, betreut von Hochschule und Firma.
 Im 7. Semester (letzte Praxisphase) schreibst du die Bachelorarbeit, meist zu einem Thema aus der Firma.
 TODO: Ein konkretes Beispiel aus deiner Praxisphase: Woran hast du gearbeitet?
--->
-
----
-layout: stage
----
-
-# Wahr oder falsch?
-
-<div class="myths">
-  <div class="myth">
-    <p class="claim">Für ein duales Studium brauchst du ein Einser-Abi.</p>
-    <div v-click class="verdict"><b class="chip no">Falsch</b><span>Die Firma wählt aus. Motivation zählt dort oft mehr als die Note.</span></div>
-  </div>
-  <div class="myth">
-    <p class="claim">Semesterferien gibt es nicht.</p>
-    <div v-click class="verdict"><b class="chip yes">Wahr</b><span>Du hast Urlaub wie im Job, meist 25 bis 30 Tage im Jahr.</span></div>
-  </div>
-  <div class="myth">
-    <p class="claim">Nach dem Studium musst du in der Firma bleiben.</p>
-    <div v-click class="verdict"><b class="chip maybe">Kommt drauf an</b><span>Manche Verträge binden dich für ein paar Jahre. Genau lesen!</span></div>
-  </div>
-  <div class="myth">
-    <p class="claim">Dual studieren kann man nur BWL.</p>
-    <div v-click class="verdict"><b class="chip no">Falsch</b><span>Auch Informatik, Technik, Soziales, Gesundheit und vieles mehr.</span></div>
-  </div>
-</div>
-
-<style>
-.myths {
-  display: grid;
-  gap: 0;
-  margin-top: -8px;
-}
-.myth {
-  display: grid;
-  grid-template-columns: 440px 1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 18px 0;
-  border-top: 2px solid rgba(18, 24, 51, 0.15);
-}
-.claim {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-}
-.verdict {
-  display: grid;
-  grid-template-columns: 196px 1fr;
-  align-items: center;
-  gap: 20px;
-  font-size: 21px;
-  line-height: 1.25;
-}
-.chip {
-  justify-self: start;
-  text-align: center;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font: 800 19px/1 var(--font-display);
-  color: #fff;
-}
-.chip.yes { background: var(--ink); }
-.chip.no { background: var(--ink); text-decoration: none; }
-.chip.maybe { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 3px var(--ink); }
-</style>
-
-<!--
-[6:00–8:15] Mitmach-Runde ohne Handy. Pro Aussage ca. 30 Sekunden:
-1. Aussage vorlesen.
-2. "Daumen hoch für wahr, Daumen runter für falsch. Drei, zwei, eins, jetzt!"
-   (Daumen statt Hand heben: alle machen gleichzeitig und im Sitzen mit, niemand steht allein da.)
-3. Kommentieren, was du siehst: "Fast alle Daumen runter …"
-4. Klicken, Lösung erscheint, ein Satz Erklärung, nächste Aussage.
-Tempo halten, nicht jede Antwort ausdiskutieren.
 -->
 
 ---
@@ -497,7 +424,7 @@ Tempo halten, nicht jede Antwort ausdiskutieren.
     <h2><div class="i-ph-thumbs-down-bold" />Dagegen</h2>
     <ul>
       <li>Weniger Freizeit als im normalen Studium</li>
-      <li>Du legst dich früh auf eine Firma fest</li>
+      <li>Du legst dich früh auf eine Firma fest, manche Verträge binden dich auch nach dem Studium für ein paar Jahre</li>
       <li>Hörsaal und Büro gleichzeitig: Du musst dich gut organisieren</li>
     </ul>
   </div>
@@ -681,8 +608,114 @@ Links auf der letzten Folie.
 
 <!--
 [12:00–13:30] Zu jedem Tipp einen Satz aus deinem Alltag.
-Danach direkt zur Fragen-Folie.
-Puffer bis 15:00 ist eingeplant. Wenn du früher fertig bist: umso mehr Zeit für Fragen.
+Danach direkt zum Quiz.
+-->
+
+---
+layout: stage
+---
+
+<div class="quiz">
+  <div>
+    <h1 class="quiz-title">Habt ihr aufgepasst?</h1>
+    <p class="quiz-sub">Wahr oder falsch? Abstimmen in Slido.</p>
+    <div class="myths">
+      <div class="myth">
+        <p class="claim"><b class="num">1</b>Für ein duales Studium brauchst du ein Einser-Abi.</p>
+        <div v-click class="verdict"><b class="chip">Falsch</b><span>Die Firma wählt aus. Motivation zählt dort oft mehr als die Note.</span></div>
+      </div>
+      <div class="myth">
+        <p class="claim"><b class="num">2</b>Du bewirbst dich zuerst bei der Hochschule.</p>
+        <div v-click class="verdict"><b class="chip">Falsch</b><span>Erst die Firma, dann schreibst du dich an der Hochschule ein.</span></div>
+      </div>
+      <div class="myth">
+        <p class="claim"><b class="num">3</b>Semesterferien wie im normalen Studium gibt es nicht.</p>
+        <div v-click class="verdict"><b class="chip">Wahr</b><span>Dann bist du in der Firma. Urlaub hast du wie im Job, meist 25 bis 30 Tage.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="quiz-qr">
+    <QrCode :size="220" />
+    <p>slido.com<br>Code <strong><SlidoCode /></strong></p>
+  </div>
+</div>
+
+<style>
+.quiz {
+  display: grid;
+  grid-template-columns: 1fr 244px;
+  gap: 48px;
+  align-items: center;
+  height: 100%;
+}
+.quiz-title {
+  margin-bottom: 4px !important;
+}
+.quiz-sub {
+  font-size: var(--fs-small);
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.myths {
+  display: grid;
+}
+.myth {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 18px 0;
+  border-top: 2px solid rgba(18, 24, 51, 0.15);
+}
+.claim {
+  display: flex;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.claim .num {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  font: 800 18px/1 var(--font-display);
+}
+.verdict {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+.chip {
+  justify-self: start;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font: 800 19px/1 var(--font-display);
+  color: #fff;
+  background: var(--ink);
+}
+.quiz-qr p {
+  margin-top: 16px;
+  font-size: 20px;
+  text-align: center;
+}
+</style>
+
+<!--
+[10:45–13:30] Abschlussquiz in Slido, 3 Umfragen (je eine pro Aussage, Optionen "Wahr"/"Falsch").
+"Handys raus, scannt den Code. Wer gewinnt gegen den Rest der Klasse?" Pro Aussage ca. 50 Sekunden:
+1. Umfrage in Slido starten, Aussage vorlesen, 20–30 Sekunden warten.
+2. Ergebnis auf dem Laptop ablesen und ansagen, NICHT auf den Beamer: "70 Prozent sagen falsch …"
+3. Klicken, Lösung erscheint, ein Satz Erklärung, nächste Umfrage.
+Fallback ohne WLAN: Daumen hoch für wahr, Daumen runter für falsch.
+
+Überleitung, laut sagen: "Ihr seid jetzt eh alle in Slido. Dort könnt ihr direkt eure Fragen stellen, anonym."
 -->
 
 ---
@@ -750,6 +783,7 @@ layout: stage
 
 <!--
 [13:30] Fragerunde. Diese Folie bleibt stehen, Slido liest du nur auf dem Laptop.
+Durchs Quiz sind fast alle schon in Slido: Kurz warten, bis die ersten Fragen reinkommen.
 Mit den Fragen anfangen, die schon reingekommen sind, vorlesen und antworten.
 Kommt nichts mehr: Danke sagen, fertig.
 -->
@@ -767,19 +801,29 @@ layout: end
       <p><span>Infos zum dualen Studium</span><b>h-da.de/dual</b></p>
     </div>
   </div>
-  <div class="end-qr">
-    <QrCode target="slides" :size="220" />
-    <p>Die Folien zum Nachlesen</p>
+  <div class="end-qrs">
+    <div class="end-qr">
+      <QrCode :size="170" />
+      <p>Später fragen<br>(Slido)</p>
+    </div>
+    <div class="end-qr">
+      <QrCode target="slides" :size="170" />
+      <p>Die Folien<br>zum Nachlesen</p>
+    </div>
   </div>
 </div>
 
 <style>
 .end-grid {
   display: grid;
-  grid-template-columns: 1fr 244px;
-  gap: 64px;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
   align-items: center;
   height: 100%;
+}
+.end-qrs {
+  display: flex;
+  gap: 32px;
 }
 .end-title {
   font-size: var(--fs-hero) !important;
@@ -812,6 +856,6 @@ layout: end
 </style>
 
 <!--
-[29:00] Danke sagen, auf den Folien-QR hinweisen.
+[29:00] Danke sagen, auf die beiden QR-Codes hinweisen: Slido für spätere Fragen, Folien zum Nachlesen.
 Slido nach dem Vortrag tatsächlich noch durchgehen und offene Fragen beantworten.
 -->

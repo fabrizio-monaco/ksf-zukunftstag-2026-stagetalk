@@ -36,7 +36,7 @@ const semesters = [
         {{ s.label }}
       </div>
       <div v-else class="block holiday">
-        Ferien
+        Arbeiten
       </div>
     </div>
   </div>
