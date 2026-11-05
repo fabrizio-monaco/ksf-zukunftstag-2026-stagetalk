@@ -1,0 +1,27 @@
+{
+  "name": "ksf-zukunftstag-2026-stagetalk",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export --output dist-pdf/studieren-mit-monatsgehalt.pdf",
+    "shots": "slidev export --format png --output shots --with-clicks false"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "5.3.0",
+    "@fontsource-variable/lexend": "5.3.0",
+    "@iconify-json/ph": "1.2.2",
+    "@slidev/cli": "53.0.0",
+    "@slidev/theme-default": "0.25.0",
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "playwright-chromium": "1.64.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "markdown-it": "14.3.3"
+    }
+  }
+}
