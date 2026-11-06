@@ -248,7 +248,7 @@ Das Studium dauert 3,5 Jahre, das letzte halbe Jahr läuft mit dem Gehalt aus de
   <MePhoto />
   <ul class="me-list">
     <li><div class="i-ph-graduation-cap-bold c-uni" /><span>Ich habe Informatik dual an der Hochschule Darmstadt studiert.</span></li>
-    <li><div class="i-ph-buildings-bold c-firm" /><span>Heute arbeite ich Vollzeit als <span class="todo">[Rolle]</span> bei <span class="todo">[Firma]</span>.</span></li>
+    <li><div class="i-ph-buildings-bold c-firm" /><span>Heute arbeite ich Vollzeit als Private Cloud Engineer bei CID GmbH.</span></li>
     <li><div class="i-ph-armchair-bold" /><span>Vor ein paar Jahren saß ich da, wo ihr jetzt sitzt, und wusste auch nicht, was ich machen will.</span></li>
   </ul>
 </div>
